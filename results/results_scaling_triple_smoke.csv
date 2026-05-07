@@ -1,0 +1,3 @@
+digits,m,N,N_over_D,N_over_sqrtD,D_over_N,time_seconds,exp_calls,verified_digits,tail_minus_log10
+50,2.0,10,0.2,1.41421356237,5.0,0.002688,2,103,104.798234625
+100,2.0,13,0.13,1.3,7.69230769231,0.002849,2,168,169.94240691

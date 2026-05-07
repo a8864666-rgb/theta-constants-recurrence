@@ -1,0 +1,4 @@
+digits,method,time_seconds,verified_digits
+50,mpmath,0.000067,76
+50,agm,0.000268,74
+50,chudnovsky,0.000131,74

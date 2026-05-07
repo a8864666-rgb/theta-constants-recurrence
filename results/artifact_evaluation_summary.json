@@ -1,0 +1,92 @@
+{
+  "all_commands_passed": true,
+  "all_expected_outputs_created": true,
+  "commands": [
+    {
+      "name": "Environment report",
+      "cmd": "/opt/pyvenv/bin/python scripts/environment_report.py",
+      "returncode": 0,
+      "seconds": 5.671377820000004
+    },
+    {
+      "name": "Unit tests",
+      "cmd": "/opt/pyvenv/bin/python -m pytest -q",
+      "returncode": 0,
+      "seconds": 8.5938735
+    },
+    {
+      "name": "Single theta--Carlson run",
+      "cmd": "/opt/pyvenv/bin/python scripts/run_single.py --digits 50 --m 2.0 --mode triple --validate",
+      "returncode": 0,
+      "seconds": 5.941816010000004
+    },
+    {
+      "name": "Small scaling benchmark",
+      "cmd": "/opt/pyvenv/bin/python scripts/benchmark_scaling_triple.py --digits 50 100 --out results/results_scaling_triple_smoke.csv",
+      "returncode": 0,
+      "seconds": 5.6173166760000015
+    },
+    {
+      "name": "Small correctness validation",
+      "cmd": "/opt/pyvenv/bin/python scripts/validate_correctness.py --digits 50 100 --out-prefix results/results_correctness_smoke",
+      "returncode": 0,
+      "seconds": 5.695958165999997
+    },
+    {
+      "name": "Small baseline comparison",
+      "cmd": "/opt/pyvenv/bin/python scripts/benchmark_pi_baselines.py --digits 50 --mode mpmath --mode agm --mode chudnovsky --out results/results_pi_baselines_smoke.csv",
+      "returncode": 0,
+      "seconds": 5.679895271999996
+    },
+    {
+      "name": "Theta-family reproduction script",
+      "cmd": "/opt/pyvenv/bin/python scripts/reproduce_theta_family_table.py --digits 50 100 --out results/results_theta_family_smoke.csv",
+      "returncode": 0,
+      "seconds": 5.734962201000002
+    }
+  ],
+  "outputs": [
+    {
+      "path": "results/results_scaling_triple_smoke.csv",
+      "exists": true,
+      "size_bytes": 224,
+      "preview": "digits,m,N,N_over_D,N_over_sqrtD,D_over_N,time_seconds,exp_calls,verified_digits,tail_minus_log10\n50,2.0,10,0.2,1.41421356237,5.0,0.002688,2,103,104.798234625\n100,2.0,13,0.13,1.3,7.69230769231,0.002849,2,168,169.94240691\n"
+    },
+    {
+      "path": "results/results_correctness_smoke_certification.csv",
+      "exists": true,
+      "size_bytes": 472,
+      "preview": "digits,m,N,tail_minus_log10,delta_theta2,delta_theta3,verified_digits\n50,2.0,10,104.798234624849482903187569364822851761611753506000836425036501726086923349562626668481575082646837497666844311484499030377520635973510125647886328312,0.0,0.0,103\n100,2.0,13,169.94240691041055310979753092556247190735684855286659685780395836784324073896588576271714510306658181700575455763949223666704782222468006820314003502518393906316170892667868307750562734619281885640599,0.0,0.0,168\n"
+    },
+    {
+      "path": "results/results_correctness_smoke_tail_bounds.csv",
+      "exists": true,
+      "size_bytes": 406,
+      "preview": "digits,m,N,tail_minus_log10\n50,2.0,10,104.798234624849482903187569364822851761611753506000836425036501726086923349562626668481575082646837497666844311484499030377520635973510125647886328312\n100,2.0,13,169.94240691041055310979753092556247190735684855286659685780395836784324073896588576271714510306658181700575455763949223666704782222468006820314003502518393906316170892667868307750562734619281885640599\n"
+    },
+    {
+      "path": "results/results_correctness_smoke_recurrence_vs_direct.csv",
+      "exists": true,
+      "size_bytes": 77,
+      "preview": "digits,m,N,delta_theta2,delta_theta3\n50,2.0,10,0.0,0.0\n100,2.0,13,0.0,0.0\n"
+    },
+    {
+      "path": "results/results_correctness_smoke_guard_stability.csv",
+      "exists": true,
+      "size_bytes": 113,
+      "preview": "digits,m,N,base_verified,high_guard_verified,cross_stable_digits\n50,2.0,10,103,103,103\n100,2.0,13,168,168,168\n"
+    },
+    {
+      "path": "results/results_pi_baselines_smoke.csv",
+      "exists": true,
+      "size_bytes": 114,
+      "preview": "digits,method,time_seconds,verified_digits\n50,mpmath,0.000067,76\n50,agm,0.000268,74\n50,chudnovsky,0.000131,74\n"
+    },
+    {
+      "path": "results/results_theta_family_smoke.csv",
+      "exists": true,
+      "size_bytes": 261,
+      "preview": "digits,mode,m,N,time_seconds,exp_calls,verified_digits\n50,naive,2.0,10,0.002546,21,103\n50,partial,2.0,10,0.002009,21,103\n50,triple,2.0,10,0.001566,2,103\n100,naive,2.0,13,0.003195,27,168\n100,partial,2.0,13,0.002824,27,168\n100,triple,2.0,13,0.002274,2,168\n"
+    }
+  ]
+}

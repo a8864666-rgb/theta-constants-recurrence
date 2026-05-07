@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software artifact, please cite the associated TOMS manuscript."
+title: "Theta--Carlson TOMS Artifact"
+authors:
+  - family-names: "Lâu"
+    given-names: "Thiat-uí"
+version: "0.1.0"
+date-released: "2026-05-06"
+license: "MIT"

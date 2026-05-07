@@ -1,0 +1,7 @@
+digits,mode,m,N,time_seconds,exp_calls,verified_digits
+50,naive,2.0,10,0.002546,21,103
+50,partial,2.0,10,0.002009,21,103
+50,triple,2.0,10,0.001566,2,103
+100,naive,2.0,13,0.003195,27,168
+100,partial,2.0,13,0.002824,27,168
+100,triple,2.0,13,0.002274,2,168

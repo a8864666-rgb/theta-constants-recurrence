@@ -1,0 +1,4 @@
+digits,m,N,base_verified,high_guard_verified,cross_stable_digits
+1000,2.0,35,1099,1124,1099
+5000,2.0,79,5499,5557,5499
+10000,2.0,112,10999,11089,10999
