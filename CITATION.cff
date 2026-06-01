@@ -1,9 +1,17 @@
 cff-version: 1.2.0
-message: "If you use this software artifact, please cite the associated TOMS manuscript."
-title: "Theta--Carlson TOMS Artifact"
+title: "Recurrence-Accelerated High-Precision Evaluation of Jacobi Theta Constants with Gaussian-Tail Certification"
+message: "If you use this software, please cite the associated manuscript and this repository."
+type: software
 authors:
   - family-names: "Lâu"
     given-names: "Thiat-uí"
-version: "0.1.0"
-date-released: "2026-05-06"
+repository-code: "https://github.com/a8864666-rgb/theta-constants-recurrence"
+version: "v1.0-theta"
 license: "MIT"
+keywords:
+  - Jacobi theta constants
+  - high-precision arithmetic
+  - Gaussian theta series
+  - recurrence acceleration
+  - numerical algorithms
+  - special functions
